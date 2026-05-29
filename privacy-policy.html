@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – SandBlitz</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f7f5f0;
+      --surface: #ffffff;
+      --ink: #1a1814;
+      --muted: #6b6760;
+      --accent: #c45c2e;
+      --accent-light: #f5ede8;
+      --border: #e2dfd8;
+      --radius: 10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 1.75;
+      padding: 48px 24px 80px;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 28px;
+      margin-bottom: 36px;
+    }
+
+    .app-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 400;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+
+    /* ── Meta table ── */
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+
+    .meta-cell {
+      background: var(--surface);
+      padding: 14px 18px;
+    }
+
+    .meta-cell .label {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .meta-cell .value {
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .meta-cell .value a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .meta-cell .value a:hover { text-decoration: underline; }
+
+    .intro {
+      font-size: 15px;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    .section-number {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 12px 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    ul li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    ul li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 7px;
+    }
+
+    /* ── Third-party cards ── */
+    .service-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 14px 0;
+    }
+
+    .service-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .service-name { font-weight: 500; font-size: 14px; }
+    .service-desc { font-size: 13px; color: var(--muted); }
+
+    /* ── External link ── */
+    a.external {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 400;
+      word-break: break-all;
+    }
+    a.external:hover { text-decoration: underline; }
+
+    /* ── Contact box ── */
+    .contact-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-top: 14px;
+    }
+
+    .contact-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header>
+      <div class="app-label">SandBlitz — A for Arts and Crafts</div>
+      <h1>Privacy Policy</h1>
+
+      <div class="meta-grid">
+        <div class="meta-cell">
+          <div class="label">Effective Date</div>
+          <div class="value">December 28, 2025</div>
+        </div>
+        <div class="meta-cell">
+          <div class="label">App Name</div>
+          <div class="value">SandBlitz</div>
+        </div>
+        <div class="meta-cell">
+          <div class="label">Developer</div>
+          <div class="value">A for Arts and Crafts</div>
+        </div>
+        <div class="meta-cell">
+          <div class="label">Contact</div>
+          <div class="value"><a href="mailto:ananya102343@gmail.com">ananya102343@gmail.com</a></div>
+        </div>
+      </div>
+
+      <p class="intro">This Privacy Policy explains how we collect, use, and protect information when you use our mobile application ("App").</p>
+    </header>
+
+    <section>
+      <span class="section-number">01</span>
+      <h2>Information We Collect</h2>
+      <p>We do not require users to create an account or provide personal information such as name, email address, or phone number. However, the App may collect non-personal information automatically, including:</p>
+      <ul>
+        <li>Anonymous usage data (e.g., gameplay interactions, session duration)</li>
+        <li>Device information (such as device type, OS version)</li>
+        <li>Crash and performance data</li>
+      </ul>
+      <p>This information is collected solely to improve app stability, performance, and user experience.</p>
+    </section>
+
+    <section>
+      <span class="section-number">02</span>
+      <h2>Advertising (Google AdMob)</h2>
+      <p>The App displays advertisements provided by Google AdMob. AdMob may collect and use data such as:</p>
+      <ul>
+        <li>Device identifiers</li>
+        <li>Approximate location</li>
+        <li>Ad interaction data</li>
+      </ul>
+      <p>This data is used to display ads and measure their performance. You can learn more about how Google uses data here:<br />
+        <a class="external" href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a>
+      </p>
+    </section>
+
+    <section>
+      <span class="section-number">03</span>
+      <h2>Children's Privacy</h2>
+      <p>Our App is intended for a general audience, including children under the age of 13. We do not knowingly collect personally identifiable information from children.</p>
+      <p>Ads shown in the App are configured to comply with applicable child-privacy regulations (such as COPPA), and we do not request sensitive user data.</p>
+      <p>If you believe that we have inadvertently collected personal data from a child, please contact us and we will promptly remove it.</p>
+    </section>
+
+    <section>
+      <span class="section-number">04</span>
+      <h2>How We Use Information</h2>
+      <p>We use collected information to:</p>
+      <ul>
+        <li>Improve gameplay and app features</li>
+        <li>Monitor and fix crashes</li>
+        <li>Analyze anonymous usage trends</li>
+        <li>Serve advertisements</li>
+      </ul>
+      <p>We do not sell or share personal data with third parties.</p>
+    </section>
+
+    <section>
+      <span class="section-number">05</span>
+      <h2>Data Security</h2>
+      <p>We take reasonable measures to protect collected information. However, no method of electronic storage or transmission is 100% secure.</p>
+    </section>
+
+    <section>
+      <span class="section-number">06</span>
+      <h2>Third-Party Services</h2>
+      <p>The App uses third-party services that may collect information independently:</p>
+      <div class="service-list">
+        <div class="service-card">
+          <span class="service-name">Google AdMob</span>
+          <span class="service-desc">Advertising</span>
+        </div>
+        <div class="service-card">
+          <span class="service-name">Google Firebase Crashlytics / Analytics</span>
+          <span class="service-desc">Crash reporting &amp; anonymous usage analytics</span>
+        </div>
+      </div>
+      <p>Each service operates under its own privacy policy.</p>
+    </section>
+
+    <section>
+      <span class="section-number">07</span>
+      <h2>Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
+    </section>
+
+    <section>
+      <span class="section-number">08</span>
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+      <div class="contact-box">
+        <span class="contact-icon">📧</span>
+        <div>
+          <div style="font-size:12px;color:var(--muted);margin-bottom:2px;">Email</div>
+          <a href="mailto:ananya102343@gmail.com">ananya102343@gmail.com</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      &copy; 2025 A for Arts and Crafts · SandBlitz · All rights reserved
+    </footer>
+
+  </div>
+</body>
+</html>
